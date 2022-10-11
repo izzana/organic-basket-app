@@ -2,6 +2,7 @@
 //ex: export default function Cesta(){}
 import React from 'react';
 import {StyleSheet, Image, Dimensions, Text, View} from 'react-native' //usamos chaves pq pegamos um componente exportado do react native
+import Texto from '../components/Texto'
 //let topo = require('../../assets/topo.png')
 import topo from '../../assets/topo.png'//importando uma imagem
 import logo from '../../assets/logo.png'
@@ -12,18 +13,18 @@ const width = Dimensions.get('screen').width;
 export default function Cesta() {//usei o export para que eu possa exportá-lo, usá-lo em outros arquivos
     return <>
     <Image source={ topo } style={estilos.topo}/>
-    <Text style={estilos.titulo}>Detalhe da sexta</Text>
+    <Texto style={estilos.titulo}>Detalhe da sexta</Texto>
     <View style={estilos.cesta}>
-        <Text style={estilos.nome}>Cesta de Verduras</Text>
+        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
         <View style={estilos.fazenda} >
             <Image source={ logo } style={estilos.imagemFazenda} />
-            <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+            <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
         </View>
         
-        <Text style={estilos.descricao}>Uma cesta com produtos selecionados 
+        <Texto style={estilos.descricao}>Uma cesta com produtos selecionados 
             cuidadosamente da fazenda direto para a sua cozinha
-        </Text>
-        <Text style={estilos.preco}>R$ 40,00</Text>
+        </Texto>
+        <Texto style={estilos.preco}>R$ 40,00</Texto>
     </View>
     </> 
 }
@@ -43,7 +44,8 @@ const estilos = StyleSheet.create({
         lineHeight: '26',
         color: 'white',
         fontWeight: 'bold',
-        padding: 16,
+        //padding: 16,
+        
     },
     cesta: {
         paddingVertical: 8,
@@ -53,7 +55,7 @@ const estilos = StyleSheet.create({
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontFamily: "MonteserratBold",
+        fontWeight: "bold",
     },
     fazenda: {
         flexDirection: "row",
@@ -67,7 +69,6 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: "MonteserratRegular",
     },
     descricao: {
         color: "#A3A3A3",
