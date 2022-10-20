@@ -2,11 +2,12 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
 import Texto from '../../../components/Texto';
+import Botao from '../../../components/Botao';
 //import logo from '../../../../assets/logo.png' //removi a logo física pois cada fazenda terá a sua logo e levei pra o componente cesta
 
-export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco }) {
+export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) {
     return <>
-        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
+        <Texto style={estilos.nome}> { nome } </Texto>
             <View style={estilos.fazenda} >
                 <Image source={ logoFazenda } style={estilos.imagemFazenda} />
                 <Texto style={estilos.nomeFazenda}> { nomeFazenda } </Texto>
@@ -14,6 +15,8 @@ export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, pr
             
             <Texto style={estilos.descricao}> { descricao } </Texto>
         <Texto style={estilos.preco}> {preco} </Texto>
+        
+        <Botao texto={botao} style={estilos.botao} onPress={() => {}} />
     </>
 }
 
@@ -48,5 +51,8 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
-    }
+    },
+    botao: {
+        marginTop: 16,
+    },
 });
