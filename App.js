@@ -1,10 +1,13 @@
 import { StatusBar, SafeAreaView, View } from 'react-native';
 //SafeAreaView cria uma margem por fora no IOS
-import Cesta from './src/telas/Cesta';//importando do arquivo que criei
+
 import { useFonts, 
   Montserrat_400Regular, 
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat'
+
+import Cesta from './src/telas/Cesta/index';//importando do arquivo que criei
+import mock from './src/moks/cesta'
 
 export default function App() {
   //criando uma const para carregar a fonte na nossa aplicação
@@ -18,11 +21,11 @@ export default function App() {
   if(!fonteCarregada) {
     return <View/>
   }
-  
+
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cesta />
+      <Cesta {...mock}/> 
    
     </SafeAreaView>
   );
