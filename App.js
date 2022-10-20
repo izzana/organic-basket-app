@@ -5,6 +5,7 @@ import { useFonts,
   Montserrat_400Regular, 
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat'
+import AppLoading from 'expo-app-loading';
 
 import Cesta from './src/telas/Cesta/index';//importando do arquivo que criei
 import mock from './src/moks/cesta'
@@ -16,10 +17,10 @@ export default function App() {
     "MontserratRegular": Montserrat_400Regular,
     "MontserratBold": Montserrat_700Bold,
   });
-  
+
   //fazer com que a aplicação não seja mostrada enquanto a fonte tá carregando
   if(!fonteCarregada) {
-    return <View/>
+    return <AppLoading />
   }
 
   return (
