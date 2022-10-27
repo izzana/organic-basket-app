@@ -1,6 +1,6 @@
 # organic-basket-app
 
-##📱 Projeto construido utilizando React Native
+## 📱 Projeto construido utilizando React Native
 
 O projeto implementa a tela de detalher da sexta de um e-commercer "orgs". Na tela são mostrados dados estáticos do nome da cesta, a fazenda, o preço e itens
 da sexta.
