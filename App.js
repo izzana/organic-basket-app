@@ -24,7 +24,8 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView>
+    //o tamanho do flex vai ser sempre o tamanho da tela inteira
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar />
       <Cesta {...mock}/> 
    
