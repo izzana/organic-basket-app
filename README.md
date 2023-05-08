@@ -21,7 +21,7 @@ da sexta.
 
 ### Para rodar o projeto:
 Depois de ter o repositório em sua máquina, no terminal você irá executar npm install;
-Em seguida ara rodar o projeto, ainda no terminal você irá executar npm start.
+Em seguida para rodar o projeto, ainda no terminal você irá executar npm start.
 
 Você irá vizualizar algumas opçoes de execução, pelo navegador ou por um dispositivo móvel, caso queira executar em um dispositivo móvel instale o app 
 Expo Go e certifique que o seu computador e o seu celular estejam conectados na mesma rede.
